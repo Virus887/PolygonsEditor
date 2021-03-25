@@ -1,0 +1,63 @@
+I. Klawiszologia:
+
+1. Rysowanie nowego wielokąta:
+Dodawanie wielokąta:             Przycisk "New Figure" -> Klikamy na bitmapę LPM.
+Zakończenie rysowania wielokąta: Narysowanie krawędzi między bierzącym i pierwszym wierzchołkiem lub klikamy dwukrotnie LPM.
+Anulowanie Rysowania wielokąta:  Klikamy PPM w trakcie rysowania.
+
+
+2. Edycja:
+Edycja dowolnego obiektu: Najeżdżamy na obiekt -> klikamy PPM -> wybieramu operację z menu.
+Poruszanie obiektami:     Najeżdżamy na obiekt -> przytrzymujemy LPM -> przeciągamy.
+Dodawanie relacji:        Najeżdżamy na krawędź -> klikamy "Relations" -> ustawiamy relację.
+
+
+3.Przyciski
+New figure:          Po wciśnięciu rozpoczynamy rysowanie nowego wielokąta.
+Clear all:           Rozpoczynamy rysowanie od nowa.
+Predefined polygon:  Po wciśnięciu narysowany zostanie predefiniowany wielokąt.
+Bresenham algorithm: Po wciśnięciu biblioteczny algorytm rysowania lini zostanie zastąpiony algorytmem Bresenhama.*
+
+
+
+II. Przyjęte założenia oraz algorytm relacji:
+
+1.Każda krawędź może mieć tylko jedną relację.
+2.Nie można ustawić relacji poziomej ani pionowej dla krawędzi sąsiadującej już z taką relacją.
+3.Jeśli wszystkie krawędzie oprócz jednej zawierają jakieś relacje oraz w wielokącie jest nieparzysta liczba relacji poziomych 
+  i nieparzysta liczba relacji pionowych to nie można zmienić długości tej krawędzi.
+4.Jeśli krawędź jako jedyna nie ma relacji w wielokącie i znajduje się między relacjami stałej długości to nie można ustawić na 
+  niej relacji pionowej i poziomej.
+5.Jeśli będziemy chcięli dodać relację Constant Length, a długość krawędzi nie będzie mogła ulec zmianie to długość zostanie ustawiona 
+  na długość taką jaka jest aktualnie. Jeśli można długość zmienić to powinno wyskoczyć okienko w które należy wpisać długość.
+6. Jeśli chcemy dodać relację do krawędzi która posiada już relację to podmieniamy ją.
+
+
+Relacje krawędzi zapisane są w indeksowanej liście. Dzięki temu zapewnione mamy łatwe dodawanie i edycję relacji oraz sprawne 
+wyszukiwanie ich. Dla indeksu (i) otrzymujemy relacje wierzchołków o indeksach (i) oraz (i+1).
+
+
+
+
+III. Krótki opis algorytmu w przypadku przesunięcia wierzchołka:
+
+1. Utwórz 2 zmienne pomocnicze: i=0, licznik=0.
+2. Sprawdź czy wielokąt uda się poprawić. Jeśli nie to przesuń cały wielokąt.**
+3. Przesuń wierzchołek o indeksie Idx o zadaną wartość.
+4. Sprawdź czy wierzchołek o indeksie Idx + i był w relacji z wierzchołkiem o indeksie Idx + i + 1.
+4a. Jeśli tak to popraw ten wierzchołek i zwiększ globalny licznik o 1.
+4b. Jeśli licznik jest równy (liczba_wierzchołków - 1) to idz do "6" //poprawiliśmy wszystkie wierzchołki.
+5. Sprawdź czy wierzchołek o indeksie Idx - i był w relacji z wierzchołkiem o indeksie Idx - i - 1.
+5a. Jeśli tak to popraw ten wierzchołek i zwiększ globalny licznik o 1.
+6. Jeśli licznik jest mniejszy od liczby wierzchołków - 1 to i++ i idź do 4.
+7. Jeśli w kroku 3 i 4 nie mięliśmy już co poprawiać to przerwij algorytm.
+
+W przypadku przesunięcia krawędzi działamy analogicznie. Jedyna zmiana jaką wprowadzamy to przesunięcie 2 wierzchołków, a następnie
+sprawdzenie i ewentualne poprawienie (liczba_wierzchołków - 2) pozostałych wierzchołków.
+
+
+
+*Funkcja Brasenhama znajduje się w pliku "Drawing Functions" (linijka 17)
+
+**Przed wykonaniem algorytmu, najpierw upewniamy się że zadziała on poprawnie. Jeśli okaże sie że ostatni poprawiany wierchołek 
+nie będzie mógł spełnić relacji to decydujemy się na przesunięcie całego wielokąta.

@@ -1,0 +1,24 @@
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\obj\Debug\GKProject1.csprojAssemblyReference.cache
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\obj\Debug\GKProject1.Properties.Resources.resources
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\obj\Debug\GKProject1.csproj.GenerateResource.cache
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\obj\Debug\GKProject1.csproj.CoreCompileInputs.cache
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\bin\Debug\GKProject1.exe.config
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\bin\Debug\GKProject1.exe
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\bin\Debug\GKProject1.pdb
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\bin\Debug\GKProject1.exe.CodeAnalysisLog.xml
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\bin\Debug\GKProject1.exe.lastcodeanalysissucceeded
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\obj\Debug\GKProject1.exe
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\obj\Debug\GKProject1.pdb
+C:\Users\ginka\Desktop\Sem5\Grafika Komputerowa 1\Projekt 1\GKProject1\GKProject1\obj\Debug\GKProject1.MainForm.resources
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\bin\Debug\GKProject1.exe.config
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\bin\Debug\GKProject1.exe
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\bin\Debug\GKProject1.pdb
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\bin\Debug\GKProject1.exe.CodeAnalysisLog.xml
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\bin\Debug\GKProject1.exe.lastcodeanalysissucceeded
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\obj\Debug\GKProject1.csprojAssemblyReference.cache
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\obj\Debug\GKProject1.MainForm.resources
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\obj\Debug\GKProject1.Properties.Resources.resources
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\obj\Debug\GKProject1.csproj.GenerateResource.cache
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\obj\Debug\GKProject1.csproj.CoreCompileInputs.cache
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\obj\Debug\GKProject1.exe
+C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\obj\Debug\GKProject1.pdb

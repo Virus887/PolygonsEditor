@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Targets>
+  <Target Name="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1\bin\Debug\GKProject1.exe">
+   <Modules>
+    <Module Name="gkproject1.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'GKProject1.exe' with a strong name key.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'GKProject1.exe' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Warning">Because assembly 'GKProject1.exe' contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="GKProject1">
+       <Types>
+        <Type Name="MainForm" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ClearBitmap()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="106">In method 'MainForm.ClearBitmap()', object 'cleanBitmap' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'cleanBitmap' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ConstantLengthMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="149">Method 'MainForm.ConstantLengthMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="149">Method 'MainForm.ConstantLengthMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Cannot set constant length relation.".</Issue>
+            </Message>
+            <Message Id="type" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="145">'MainForm.ConstantLengthMenuItem_Click(object, EventArgs)' declares a variable, 'type', of type 'MainForm.RelationType', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="149">Change 'MainForm.ConstantLengthMenuItem_Click(object, EventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DistanceFromPointFToLine(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseMoveEvent.cs" Line="136">The 'this' parameter (or 'Me' in Visual Basic) of 'MainForm.DistanceFromPointFToLine(PointF, PointF, PointF)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawHoveredLine(System.Drawing.PointF,System.Drawing.PointF,GKProject1.MainForm+RelationType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="327">In method 'MainForm.DrawHoveredLine(PointF, PointF, MainForm.RelationType)', call System.IDisposable.Dispose on object 'pen' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="326">In method 'MainForm.DrawHoveredLine(PointF, PointF, MainForm.RelationType)', correct the spelling of 'p' in parameter name 'p1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="326">In method 'MainForm.DrawHoveredLine(PointF, PointF, MainForm.RelationType)', correct the spelling of 'p' in parameter name 'p2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawHoveredPointF(System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="294">In method 'MainForm.DrawHoveredPointF(PointF)', call System.IDisposable.Dispose on object 'pen' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="292">In method 'MainForm.DrawHoveredPointF(PointF)', consider providing a more meaningful name than parameter name 'p'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawHoveredPolygon(GKProject1.MainForm+Polygon)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="248">In method 'MainForm.DrawHoveredPolygon(MainForm.Polygon)', call System.IDisposable.Dispose on object 'blueBrush' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawingArea_LeftMouseClick(System.Windows.Forms.MouseEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="e" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseClickEvent.cs" Line="35">Parameter 'e' of 'MainForm.DrawingArea_LeftMouseClick(MouseEventArgs)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawingArea_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseMoveEvent.cs" Line="43">'MainForm.DrawingArea_MouseMove(object, MouseEventArgs)' has a cyclomatic complexity of 32. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawingArea_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="65">Method 'MainForm.DrawingArea_MouseUp(object, MouseEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="76">Method 'MainForm.DrawingArea_MouseUp(object, MouseEventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="65">Method 'MainForm.DrawingArea_MouseUp(object, MouseEventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Cannot set hotizontal relation.".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="76">Method 'MainForm.DrawingArea_MouseUp(object, MouseEventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Cannot set hotizontal relation.".</Issue>
+            </Message>
+            <Message Id="hotizontal" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="65">Correct the spelling of the unrecognized token 'hotizontal' in the literal '"Cannot set hotizontal relation."'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="76">Correct the spelling of the unrecognized token 'hotizontal' in the literal '"Cannot set hotizontal relation."'.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="65">Change 'MainForm.DrawingArea_MouseUp(object, MouseEventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.cs" Line="76">Change 'MainForm.DrawingArea_MouseUp(object, MouseEventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawLine(System.Drawing.PointF,System.Drawing.PointF,GKProject1.MainForm+RelationType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="312">In method 'MainForm.DrawLine(PointF, PointF, MainForm.RelationType)', call System.IDisposable.Dispose on object 'pen' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="304">In method 'MainForm.DrawLine(PointF, PointF, MainForm.RelationType)', correct the spelling of 'p' in parameter name 'p1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="304">In method 'MainForm.DrawLine(PointF, PointF, MainForm.RelationType)', correct the spelling of 'p' in parameter name 'p2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawOldLine(System.Drawing.PointF,System.Drawing.PointF,GKProject1.MainForm+RelationType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="321">In method 'MainForm.DrawOldLine(PointF, PointF, MainForm.RelationType)', call System.IDisposable.Dispose on object 'pen' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="319">In method 'MainForm.DrawOldLine(PointF, PointF, MainForm.RelationType)', correct the spelling of 'p' in parameter name 'p1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="319">In method 'MainForm.DrawOldLine(PointF, PointF, MainForm.RelationType)', correct the spelling of 'p' in parameter name 'p2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="type" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="319">Parameter 'type' of 'MainForm.DrawOldLine(PointF, PointF, MainForm.RelationType)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawOldPointF(System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="286">In method 'MainForm.DrawOldPointF(PointF)', call System.IDisposable.Dispose on object 'pen' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="285">In method 'MainForm.DrawOldPointF(PointF)', consider providing a more meaningful name than parameter name 'p'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawPointF(System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="280">In method 'MainForm.DrawPointF(PointF)', call System.IDisposable.Dispose on object 'pen' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="279">In method 'MainForm.DrawPointF(PointF)', consider providing a more meaningful name than parameter name 'p'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawPolygon(GKProject1.MainForm+Polygon)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="228">In method 'MainForm.DrawPolygon(MainForm.Polygon)', call System.IDisposable.Dispose on object 'blueBrush' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DrawRelation(System.Drawing.PointF,System.Drawing.PointF,GKProject1.MainForm+RelationType,System.Drawing.Graphics)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="g" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="334">In method 'MainForm.DrawRelation(PointF, PointF, MainForm.RelationType, Graphics)', consider providing a more meaningful name than parameter name 'g'.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="334">In method 'MainForm.DrawRelation(PointF, PointF, MainForm.RelationType, Graphics)', correct the spelling of 'p' in parameter name 'p1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="334">In method 'MainForm.DrawRelation(PointF, PointF, MainForm.RelationType, Graphics)', correct the spelling of 'p' in parameter name 'p2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="334">The 'this' parameter (or 'Me' in Visual Basic) of 'MainForm.DrawRelation(PointF, PointF, MainForm.RelationType, Graphics)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+            <Message Id="3" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Drawing Functions.cs" Line="342">In externally visible method 'MainForm.DrawRelation(PointF, PointF, MainForm.RelationType, Graphics)', validate parameter 'g' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EdgeDeleteMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="90">Method 'MainForm.EdgeDeleteMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="90">Method 'MainForm.EdgeDeleteMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Polygon must have 3 verticles.".</Issue>
+            </Message>
+            <Message Id="verticles" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="90">Correct the spelling of the unrecognized token 'verticles' in the literal '"Polygon must have 3 verticles."'.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="90">Change 'MainForm.EdgeDeleteMenuItem_Click(object, EventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EdgeDeleteRelationMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="189">Method 'MainForm.EdgeDeleteRelationMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="189">Method 'MainForm.EdgeDeleteRelationMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Cannot delete relation.".</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="189">Change 'MainForm.EdgeDeleteRelationMenuItem_Click(object, EventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetHintRelation()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseMoveEvent.cs" Line="25">Change 'MainForm.GetHintRelation()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HorizontalLineMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="163">Method 'MainForm.HorizontalLineMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="163">Method 'MainForm.HorizontalLineMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Cannot set hotizontal relation.".</Issue>
+            </Message>
+            <Message Id="hotizontal" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="163">Correct the spelling of the unrecognized token 'hotizontal' in the literal '"Cannot set hotizontal relation."'.</Issue>
+            </Message>
+            <Message Id="type" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="159">'MainForm.HorizontalLineMenuItem_Click(object, EventArgs)' declares a variable, 'type', of type 'MainForm.RelationType', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="163">Change 'MainForm.HorizontalLineMenuItem_Click(object, EventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="194">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Bresenham algorithm".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="166">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Clear all".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="155">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "New figure".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="346">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Polygons Editor".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="179">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Predefined polygon 1".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="207">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Predefined polygon 2".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="220">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Predefined polygon 3".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="232">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Relations hints".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="74">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "menuStrip1".</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.ToolStripItem.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="309">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Add Verticle".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="277">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Constant Length".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="317">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Delete Edge".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="332">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Delete Polygon".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="301">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Delete Relation".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="247">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Delete Verticle".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="82">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "File".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="285">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Horizontal Line".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="88">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "New blueprint".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="269">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Relations".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="293">Method 'MainForm.InitializeComponent()' passes a literal string as parameter 'value' of a call to 'ToolStripItem.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Vertical Line".</Issue>
+            </Message>
+            <Message Id="Bresenham" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="194">Correct the spelling of the unrecognized token 'Bresenham' in the literal '"Bresenham algorithm"'.</Issue>
+            </Message>
+            <Message Id="Verticle" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="309">Correct the spelling of the unrecognized token 'Verticle' in the literal '"Add Verticle"'.</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MainForm.Designer.cs" Line="247">Correct the spelling of the unrecognized token 'Verticle' in the literal '"Delete Verticle"'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PointFColidesWithPolygons(System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Colides" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseClickEvent.cs" Line="110">Correct the spelling of 'Colides' in member name 'MainForm.PointFColidesWithPolygons(PointF)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseClickEvent.cs" Line="110">In method 'MainForm.PointFColidesWithPolygons(PointF)', consider providing a more meaningful name than parameter name 'p'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PointFDeleteMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="78">Method 'MainForm.PointFDeleteMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="78">Method 'MainForm.PointFDeleteMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Polygon must have 3 verticles.".</Issue>
+            </Message>
+            <Message Id="verticles" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="78">Correct the spelling of the unrecognized token 'verticles' in the literal '"Polygon must have 3 verticles."'.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="78">Change 'MainForm.PointFDeleteMenuItem_Click(object, EventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerticalLineMenuItem_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="177">Method 'MainForm.VerticalLineMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'caption' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Error".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="177">Method 'MainForm.VerticalLineMenuItem_Click(object, EventArgs)' passes a literal string as parameter 'text' of a call to 'MessageBox.Show(string, string, MessageBoxButtons, MessageBoxIcon)'. Retrieve the following string(s) from a resource table instead: "Cannot set vertical relation.".</Issue>
+            </Message>
+            <Message Id="type" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="173">'MainForm.VerticalLineMenuItem_Click(object, EventArgs)' declares a variable, 'type', of type 'MainForm.RelationType', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MouseRightClick.cs" Line="177">Change 'MainForm.VerticalLineMenuItem_Click(object, EventArgs)' to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MainForm+Polygon" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'MainForm.Polygon'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'MainForm.Polygon' because it creates members of the following IDisposable types: 'GraphicsPath'. If 'MainForm.Polygon' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.Collections.Generic.List`1&lt;System.Drawing.PointF&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="32">Change 'List&lt;PointF&gt;' in 'MainForm.Polygon.Polygon(List&lt;PointF&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="v" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="32">In method 'MainForm.Polygon.Polygon(List&lt;PointF&gt;)', consider providing a more meaningful name than parameter name 'v'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="37">In externally visible method 'MainForm.Polygon.Polygon(List&lt;PointF&gt;)', validate parameter 'v' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CalculateRelativePointFToLine(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="508">The 'this' parameter (or 'Me' in Visual Basic) of 'MainForm.Polygon.CalculateRelativePointFToLine(PointF, PointF, PointF)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+            <Message Id="p3" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="508">Parameter 'p3' of 'MainForm.Polygon.CalculateRelativePointFToLine(PointF, PointF, PointF)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetEdgeRelation(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="312">In method 'MainForm.Polygon.GetEdgeRelation(int, int)', correct the spelling of 'idx' in parameter name 'idx1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="312">In method 'MainForm.Polygon.GetEdgeRelation(int, int)', correct the spelling of 'idx' in parameter name 'idx2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetHintRelation(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="525">In method 'MainForm.Polygon.GetHintRelation(int)', correct the spelling of 'idx' in parameter name 'idx' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="idx+1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="529">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="529">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="529">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="530">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="531">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="531">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="531">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="532">Correct the potential overflow in the operation 'idx+1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+            </Message>
+            <Message Id="idx-1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="530">Correct the potential overflow in the operation 'idx-1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="530">Correct the potential overflow in the operation 'idx-1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="532">Correct the potential overflow in the operation 'idx-1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="532">Correct the potential overflow in the operation 'idx-1' in 'MainForm.Polygon.GetHintRelation(int)'.</Issue>
+            </Message>
+            <Message Id="x" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="526">'MainForm.Polygon.GetHintRelation(int)' declares a variable, 'x', of type 'float', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+            <Message Id="y" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="527">'MainForm.Polygon.GetHintRelation(int)' declares a variable, 'y', of type 'float', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#graphicsPath" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'MainForm.Polygon.graphicsPath' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HandleConstantLengthRelationAdding(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="GKProject1.MainForm+Prompt.ShowDialog(System.String,System.String,System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="420">Method 'MainForm.Polygon.HandleConstantLengthRelationAdding(int, int)' passes a literal string as parameter 'caption' of a call to 'MainForm.Prompt.ShowDialog(string, string, string)'. Retrieve the following string(s) from a resource table instead: "Set length relation".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="420">Method 'MainForm.Polygon.HandleConstantLengthRelationAdding(int, int)' passes a literal string as parameter 'text' of a call to 'MainForm.Prompt.ShowDialog(string, string, string)'. Retrieve the following string(s) from a resource table instead: "Type length:".</Issue>
+            </Message>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="422">'MainForm.Polygon.HandleConstantLengthRelationAdding(int, int)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+            <Message Id="System.Single.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="420">Because the behavior of 'float.ToString()' could vary based on the current user's locale settings, replace this call in 'MainForm.Polygon.HandleConstantLengthRelationAdding(int, int)' with a call to 'float.ToString(IFormatProvider)'. If the result of 'float.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsNearHorizontal(System.Drawing.PointF,System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="543">The 'this' parameter (or 'Me' in Visual Basic) of 'MainForm.Polygon.IsNearHorizontal(PointF, PointF)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsNearVertical(System.Drawing.PointF,System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="538">The 'this' parameter (or 'Me' in Visual Basic) of 'MainForm.Polygon.IsNearVertical(PointF, PointF)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#relations" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'MainForm.Polygon.relations' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Change 'List&lt;MainForm.RelationType&gt;' in 'MainForm.Polygon.relations' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SwapValues(System.Int32&amp;,System.Int32&amp;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="500">The 'this' parameter (or 'Me' in Visual Basic) of 'MainForm.Polygon.SwapValues(ref int, ref int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryDeleteEdge(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="258">In method 'MainForm.Polygon.TryDeleteEdge(int, int)', correct the spelling of 'idx' in parameter name 'idx1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="258">In method 'MainForm.Polygon.TryDeleteEdge(int, int)', correct the spelling of 'idx' in parameter name 'idx2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryDeleteVerticle(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Verticle" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="240">Correct the spelling of 'Verticle' in member name 'MainForm.Polygon.TryDeleteVerticle(int)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="240">In method 'MainForm.Polygon.TryDeleteVerticle(int)', correct the spelling of 'idx' in parameter name 'idx1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryMoveEdge(System.Drawing.PointF,System.Drawing.PointF,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="69">In method 'MainForm.Polygon.TryMoveEdge(PointF, PointF, int)', correct the spelling of 'idx' in parameter name 'idx1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="idx1+1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="72">Correct the potential overflow in the operation 'idx1+1' in 'MainForm.Polygon.TryMoveEdge(PointF, PointF, int)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryMoveVerticle(System.Drawing.PointF,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Verticle" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="43">Correct the spelling of 'Verticle' in member name 'MainForm.Polygon.TryMoveVerticle(PointF, int)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="43">In method 'MainForm.Polygon.TryMoveVerticle(PointF, int)', correct the spelling of 'idx' in parameter name 'idx' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryPutVerticleOnEdge(System.Int32,System.Int32,System.Drawing.PointF)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Verticle" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="283">Correct the spelling of 'Verticle' in member name 'MainForm.Polygon.TryPutVerticleOnEdge(int, int, PointF)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="283">In method 'MainForm.Polygon.TryPutVerticleOnEdge(int, int, PointF)', correct the spelling of 'idx' in parameter name 'idx1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="283">In method 'MainForm.Polygon.TryPutVerticleOnEdge(int, int, PointF)', correct the spelling of 'idx' in parameter name 'idx2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="p" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="283">In method 'MainForm.Polygon.TryPutVerticleOnEdge(int, int, PointF)', consider providing a more meaningful name than parameter name 'p'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TrySetRelation(System.Int32,System.Int32,GKProject1.MainForm+RelationType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="322">'MainForm.Polygon.TrySetRelation(int, int, MainForm.RelationType)' has a cyclomatic complexity of 29. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+            <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="TooGeneric" Certainty="95" Level="Error" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="323">'MainForm.Polygon.TrySetRelation(int, int, MainForm.RelationType)' creates an exception of type 'Exception', an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Issue>
+            </Message>
+            <Message Id="idx" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="322">In method 'MainForm.Polygon.TrySetRelation(int, int, MainForm.RelationType)', correct the spelling of 'idx' in parameter name 'idx1' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="322">In method 'MainForm.Polygon.TrySetRelation(int, int, MainForm.RelationType)', correct the spelling of 'idx' in parameter name 'idx2' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="TrySetRelation" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="Polygon.cs" Line="323">Correct the spelling of the unrecognized token 'TrySetRelation' in the literal '"TrySetRelation: index = -1."'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#verticles" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'MainForm.Polygon.verticles' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Change 'List&lt;PointF&gt;' in 'MainForm.Polygon.verticles' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="verticles" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'verticles' in member name 'MainForm.Polygon.verticles' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MainForm+Prompt" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'MainForm.Prompt'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#ShowDialog(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MyWindow.cs" Line="31">In method 'MainForm.Prompt.ShowDialog(string, string, string)', object 'new Button()' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new Button()' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MyWindow.cs" Line="21">In method 'MainForm.Prompt.ShowDialog(string, string, string)', object 'new Form()' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new Form()' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MyWindow.cs" Line="29">In method 'MainForm.Prompt.ShowDialog(string, string, string)', object 'new Label()' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new Label()' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MyWindow.cs" Line="30">In method 'MainForm.Prompt.ShowDialog(string, string, string)', object 'new TextBox()' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new TextBox()' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-03-17 11:42:24Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\ginka\Desktop\Sem5\GK1\Projekt 1\[Gk1]Damian_Bis_Z1_v2\Część laboratoryjna\GKProject1\GKProject1" File="MyWindow.cs" Line="31">Method 'MainForm.Prompt.ShowDialog(string, string, string)' passes a literal string as parameter 'value' of a call to 'Control.Text.set(string)'. Retrieve the following string(s) from a resource table instead: "Ok".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>Avoid excessive complexity</Name>
+   <Description>Method implementations that are exceedingly complex increase the challenge of understanding and maintaining code.</Description>
+   <Resolution Name="Default">{0} has a cyclomatic complexity of {1}. Rewrite or refactor the method to reduce complexity to {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>Do not declare visible instance fields</Name>
+   <Description>Instance fields that are visible outside of the type that declares them, limit your ability to change the implementation details for those data items. Use properties instead. They do not compromise usability or performance and they do provide flexibility in that they conceal the implementation details of the underlying data.</Description>
+   <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+   <Name>Do not raise reserved exception types</Name>
+   <Description>User code should not create and raise exceptions of certain types that are reserved by the runtime or which are of a too general exception type. Exception types that are too general include Exception, SystemException, and ApplicationException. Exception types that are reserved by the runtime include ThreadAbortException, OutOfMemoryException, ExecutionEngineException, and IndexOutOfRangeException.</Description>
+   <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182338.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameterMoreMeaningfulName">In method {0}, consider providing a more meaningful name than parameter name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+   <Name>Mark assemblies with NeutralResourcesLanguageAttribute</Name>
+   <Description>The NeutralResourcesLanguage attribute informs the ResourceManager of the language used to render the neutral culture's resources for an assembly. When looking up resources in the same culture as the neutral resources language, the ResourceManager automatically uses the resources located in the main assembly, instead of searching for a satellite assembly with the current user interface culture for the current thread. This will improve lookup performance for the first resource you load and can reduce your working set.</Description>
+   <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385967.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+   <Name>Nested types should not be visible</Name>
+   <Description>Do not use public, protected or protected internal (Protected Friend) nested types as a way of grouping types. Use namespaces for this purpose. There are very limited scenarios where nested types are the best design. Also, nested type member accessibility is not clearly understood by all audiences. Enumerators are exempt from this rule.</Description>
+   <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182162.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233">
+   <Name>Operations should not overflow</Name>
+   <Description>Arithmetic operations should not be done without first validating the operands to prevent overflow.</Description>
+   <Resolution Name="Default">Correct the potential overflow in the operation '{0}' in {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182354.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+   <Name>Specify MessageBoxOptions</Name>
+   <Description>In order to run correctly on right-to-left systems, all calls to MessageBox.Show should use the overload that specifies MessageBoxOptions as an argument. Programs should detect whether they are running on a right-to-left system at run-time and pass the appropriate MessageBoxOptions value in order to display correctly.</Description>
+   <Resolution Name="Default">Change {0} to call the MessageBox.Show overload that specifies MessageBoxOptions, and make sure to set MessageBoxOptions.RightAlign and MessageBoxOptions.RtlReading if RightToLeft is set to RightToLeft.Yes on the parent control.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182191.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
